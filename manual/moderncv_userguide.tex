@@ -342,7 +342,21 @@ In case you are not using \Code{xelatex} or \Code{lualatex} which both use \Code
   %\usepackage{CJKutf8}  % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
 \end{lstlisting}
 \subsubsection{Language specific setup}
-The \Code{babel} package can be loaded in the praeamble of your CV. 
+The \code{babel} package can be loaded in the praeamble of your CV. 
+
+In order to use the \code{Polyglossia} package it is necessary to create the file
+\begin{lstlisting}
+  cvloadbeforehyperref.tex 
+\end{lstlisting}
+in the same directory where your CV file lies and include 
+loading \Code{polyglossia} and its configuration therein. Example
+\begin{lstlisting}
+  % file cvloadbeforehyperref.tex
+  \usepackage{polyglossia}
+  \setdefaultlanguage{italian}
+  \setotherlanguages{french, spanish, german}
+\end{lstlisting}
+
 
 That's about it for the general \Moderncv setup. 
 The next section deals with inputting your personal data.

@@ -106,6 +106,9 @@
 %     \setmainfont{Latin Modern}
 %     \setsansfont{Latin Modern Sans}
 %     \setmathfont{Latin Modern Math}
+      \IfFileExists{cvloadbeforehyperref.tex}%
+        {\input{cvloadbeforehyperref.tex}}%
+        {}
 %     \ifluatex
 %         \usepackage{luatextra}
 %         \usepackage{lualatex-math} %loads fontspec

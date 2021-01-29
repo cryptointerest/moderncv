@@ -1,4 +1,8 @@
 Release: next
+- include hook to input a file cvloadbeforehyperref.tex before hyperref if the
+  file exists and lua or xelatex ist used. This is mainly done to allow users 
+  to use and configure the polyglossia package which needs to be loaded before 
+  hyperref
 - partially fix orphaned section headers for singualar use of \section and \subsection
   commands and give users the new adjustable lengths \cvsectionstretchability
   and \subsectionstretchability. In case \section and \subsection are used
